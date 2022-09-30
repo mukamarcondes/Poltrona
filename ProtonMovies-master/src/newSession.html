@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <!-- <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32"> -->
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nova Sessão</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/materialize.css" />
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="newMovie.css" />
+</head>
+<style>
+    .card {
+        width: 300px;
+    }
+</style>
+
+<nav class="blue z-depth-4" style="padding:0px 10px;">
+    <div class="nav-wrapper">
+        <a href="#" class="sidenav-trigger" data-target="desktop">
+            <i class="material-icons">menu</i>
+        </a>
+        <div class="container">
+
+            <a href="index.html" class="brand-logo center">Proton Movies</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="sessoes.html">Todas as Sessões</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="about.html">Sobre</a></li>
+            </ul>
+            <ul id="navbar" class="right"></ul>
+        </div>
+    </div>
+</nav>
+
+<!--Banner -->
+<div class="slider">
+    <ul class="slides">
+        <li>
+            <img src="https://bransonimax.com/wp-content/uploads/2017/04/IMAXNewTheater.jpg"> <!-- random image -->
+            <div class="caption center-align">
+                <h3>Cinema Proton Movies</h3>
+                <h5 class="light grey-text text-lighten-3">Compre seu ingresso agora mesmo</h5>
+            </div>
+        </li>
+        <li>
+            <img src="https://images4.alphacoders.com/909/thumb-1920-909185.jpg">
+            <div class="caption bottom">
+                <h3>Vingadores Guerra Infinita</h3>
+                <h5 class="light grey-text text-lighten-3">Mais Vendidos</h5>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<div class="card-panel blue center bold z-depth-5">Nova Sessão</div>
+
+<body>
+    <div class="row container">
+        <div id="infoCard" class=" white z-depth-5 " style="height: 240px; position: relative; text-align: center; ">
+            <div class="center input-field col s12">
+                <i class="material-icons prefix">movie</i>
+                <input type="text" id="movie_selected" class="autocomplete">
+                <label for="movie_selected">Nome do Filme</label>
+            </div>
+            <div class="col s3">
+                <label>Data da Sessão</label>
+                <input type="text" id="date" class="datepicker">
+            </div>
+            <div class="col s3">
+                <label>Horário da Sessão</label>
+                <input type="text" id="time" class="timepicker">
+            </div>
+            <div class="input-field col s2">
+                    <select id="auditorium">
+                        <option value="Sala 1">Sala 1</option>
+                        <option value="Sala 1">Sala 2</option>
+                        <option value="Sala 1">Sala 3</option>
+                        <option value="Sala 1">Sala 4</option>
+                        <option value="Sala 1">Sala 5</option>
+                    </select>
+                    <label>Sala de exibição</label>
+                </div>
+
+                <div class="input-field col s2">
+                    <select id="image_type">
+                        <option value="IMAX 2D" data-icon="https://png.pngtree.com/svg/20151203/imax_971186.png">IMAX 2D</option>
+                        <option value="IMAX 3D" data-icon="https://png.pngtree.com/svg/20151203/imax_971186.png">IMAX 3D</option>
+                        <option value="2D">2D</option>
+                        <option value="3D">3D</option>
+                    </select>
+                    <label>Formato do Filme</label>
+                </div>
+
+                <div class="input-field col s2">
+                        <select id="image_type">
+                            <option value="1">1 Semana</option>
+                            <option value="2">2 Semanas</option>
+                            <option value="3">3 Semanas</option>
+                            <option value="4">1 Mês</option>
+                        </select>
+                        <label>Repetir por:</label>
+                </div>
+
+            <div class="col s12">
+                <a class="btn-floating btn-large right waves-effect waves-light blue" onclick="newSession()"><i class="material-icons">add</i></a>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+<footer class="blue page-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">Cinema Proton Movies</h5>
+                <p class="grey-text text-lighten-4">Todos os direitos reservados.</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                    <li><a class="grey-text text-lighten-3" href="about.html">Sobre</a></li>
+                    <li><a class="grey-text text-lighten-3" href="https://github.com/Rodrigmatrix/ProtonMovies">Github</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            © 2018 Proton Apps
+        </div>
+    </div>
+</footer>
+<script src="Api.js"></script>
+<script src="Movies.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.sidenav').sidenav();
+    })
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var elems = document.querySelectorAll('.slider');
+        //var instances = M.Slider.init(elems, options);
+    });
+    document.addEventListener('DOMContentLoaded', function () {
+        var elems = document.querySelectorAll('select');
+        var instances = M.FormSelect.init(elems, options);
+    });
+    $(document).ready(function () {
+        M.updateTextFields();
+    });
+
+    // Or with jQuery
+
+    // Or with jQuery
+
+    $(document).ready(function () {
+        $('select').formSelect();
+    });
+
+    $(document).ready(function () {
+        $('.slider').slider();
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var elems = document.querySelectorAll('.autocomplete');
+        var instances = M.Autocomplete.init(elems, options);
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var elems = document.querySelectorAll('.datepicker');
+
+        var instances = M.Datepicker.init(elems, options);
+    });
+
+    // Or with jQuery
+
+    $(document).ready(function () {
+        $('.datepicker').datepicker();
+    });
+
+    // Or with jQuery
+    getMovies().then(function (movies) {
+        var dataCountry = {};
+        for (var i = 0; i < movies.length; i++) {
+            //console.log(movies[i].name);
+            dataCountry[movies[i].name] = null;
+        }
+        $(document).ready(function () {
+            $('input.autocomplete').autocomplete({
+                data: dataCountry,
+            });
+            console.log(movies);
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var elems = document.querySelectorAll('.timepicker');
+        var instances = M.Timepicker.init(elems, options);
+    });
+
+    // Or with jQuery
+
+    $(document).ready(function () {
+        $('.timepicker').timepicker();
+    });
+
+</script>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Concluir</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src=" https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
+  <script src="https://js.stripe.com/v3/"></script>
+
+  <link rel="stylesheet" href="purchaseDetails.css">
+  <meta name="robots" content="noindex,follow" />
+</head>
+
+<body>
+
+  <div class="checkout-panel">
+    <div class="panel-body">
+      <h2 class="title">Concluir</h2>
+
+      <div class="progress-bar">
+        <div class="step active"></div>
+        <div class="step active"></div>
+        <div class="step"></div>
+        <div class="step"></div>
+      </div>
+    </div>
+    <div class="panel-body">
+      <h5>Filme:</h5>
+      <div class=" center col-content s4">
+        <p class=" center flow-text">${movies[i].name}</p>
+        <p align="justify"><label for="">Descrição: </label>${movies[i].description}</p>
+        <p><label for="">Duração: </label>${movies[i].runtime +" min"}</p>
+        <p><label for="">Ano: </label>${movies[i].release_date}</p>
+        <img src="${rated(movies[i].rated)}" class="left"
+          style="height: 30px; width: 30px;">
+      </div>
+
+    </div>
+    <div class="panel-footer">
+      <div></div>
+      <button class="btn next-btn" onclick="end()">Voltar para Início</button>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="script.js"></script>
+  <script src="PurchaseDetails.js"></script>
+  <script>
+   
+  </script>
+</body>
+
+</html>
