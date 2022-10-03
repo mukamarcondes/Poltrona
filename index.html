@@ -7,15 +7,14 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <!--Import materialize.css-->
-  <link type="text/css" rel="stylesheet" href="materialize.min.css" media="screen,projection" />
+  <link type="text/css" rel="stylesheet" href="/src/css/materialize.min.css" media="screen,projection" />
 
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Proton Movies</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" media="screen" href="materialize.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="/src/css/materialize.css" />
   <script type="text/javascript" src="/src/js/materialize.min.js"></script>
-
 </head>
 <style>
   .card {
@@ -31,10 +30,9 @@
 
 <body>
 
-    <div class="col s8">
-      <div class="card-panel blue z-depth-5 center bold">Escolher Poltrona</div>
+    <div class="col s8 card-panel blue z-depth-5 center bold">
+      Escolher Poltrona
     </div>
-  </div>
 
   <div class="row">
 
@@ -47,16 +45,7 @@
         <div class="col s3">
           <img src="cc.png" alt="">
           <div>
-            <div class="row center">
-              <label>Assentos Selecionados:</label>
-            </div>
-            <div id="noneSelected">
-              <h6 class="center">Nenhum</h6>
-            </div>
-            <div id="selectedSeats">
-
-            </div>
-          </div>
+           
         </div>
       </center>
         <div class="col s9 right">
@@ -184,46 +173,37 @@
             <div class="col s1">
               <h5>I</h5>
             </div>
-            <div class="col s1"><img name="I1" id="91" onclick="selectSeat(81)" src="free.png"></div>
-            <div class="col s1"><img name="I2" id="92" onclick="selectSeat(82)" src="free.png"></div>
-            <div class="col s1"><img name="I3" id="93" onclick="selectSeat(83)" src="free.png"></div>
-            <div class="col s1"><img name="I4" id="94" onclick="selectSeat(84)" src="free.png"></div>
-            <div class="col s1"><img name="I5" id="95" onclick="selectSeat(85)" src="free.png"></div>
-            <div class="col s1"><img name="I6" id="96" onclick="selectSeat(86)" src="free.png"></div>
-            <div class="col s1"><img name="I7" id="97" onclick="selectSeat(87)" src="free.png"></div>
-            <div class="col s1"><img name="I8" id="98" onclick="selectSeat(88)" src="free.png"></div>
-            <div class="col s1"><img name="I9" id="99" onclick="selectSeat(89)" src="free.png"></div>
-            <div class="col s1"><img name="I10" id="100" onclick="selectSeat(90)" src="free.png"></div>
+            <div class="col s1"><img name="I1" id="81" onclick="selectSeat(81)" src="free.png"></div>
+            <div class="col s1"><img name="I2" id="82" onclick="selectSeat(82)" src="free.png"></div>
+            <div class="col s1"><img name="I3" id="83" onclick="selectSeat(83)" src="free.png"></div>
+            <div class="col s1"><img name="I4" id="84" onclick="selectSeat(84)" src="free.png"></div>
+            <div class="col s1"><img name="I5" id="85" onclick="selectSeat(85)" src="free.png"></div>
+            <div class="col s1"><img name="I6" id="86" onclick="selectSeat(86)" src="free.png"></div>
+            <div class="col s1"><img name="I7" id="87" onclick="selectSeat(87)" src="free.png"></div>
+            <div class="col s1"><img name="I8" id="88" onclick="selectSeat(88)" src="free.png"></div>
+            <div class="col s1"><img name="I9" id="89" onclick="selectSeat(89)" src="free.png"></div>
+            <div class="col s1"><img name="I10" id="90" onclick="selectSeat(90)" src="free.png"></div>
           </div>
           <div class="row right">
             <div class="col s1">
               <h5>J</h5>
             </div>
-            <div class="col s1"><img name="J1" id="61" onclick="selectSeat(91)" src="free.png"></div>
-            <div class="col s1"><img name="J2" id="62" onclick="selectSeat(92)" src="free.png"></div>
-            <div class="col s1"><img name="J3" id="63" onclick="selectSeat(93)" src="free.png"></div>
-            <div class="col s1"><img name="J4" id="64" onclick="selectSeat(94)" src="free.png"></div>
-            <div class="col s1"><img name="J5" id="65" onclick="selectSeat(95)" src="free.png"></div>
-            <div class="col s1"><img name="J6" id="66" onclick="selectSeat(96)" src="free.png"></div>
-            <div class="col s1"><img name="J7" id="67" onclick="selectSeat(97)" src="free.png"></div>
-            <div class="col s1"><img name="J8" id="68" onclick="selectSeat(98)" src="free.png"></div>
-            <div class="col s1"><img name="J9" id="69" onclick="selectSeat(99)" src="free.png"></div>
-            <div class="col s1"><img name="J10" id="70" onclick="selectSeat(100)" src="free.png"></div>
+            <div class="col s1"><img name="J1" id="91" onclick="selectSeat(91)" src="free.png"></div>
+            <div class="col s1"><img name="J2" id="92" onclick="selectSeat(92)" src="free.png"></div>
+            <div class="col s1"><img name="J3" id="93" onclick="selectSeat(93)" src="free.png"></div>
+            <div class="col s1"><img name="J4" id="94" onclick="selectSeat(94)" src="free.png"></div>
+            <div class="col s1"><img name="J5" id="95" onclick="selectSeat(95)" src="free.png"></div>
+            <div class="col s1"><img name="J6" id="96" onclick="selectSeat(96)" src="free.png"></div>
+            <div class="col s1"><img name="J7" id="97" onclick="selectSeat(97)" src="free.png"></div>
+            <div class="col s1"><img name="J8" id="98" onclick="selectSeat(98)" src="free.png"></div>
+            <div class="col s1"><img name="J9" id="99" onclick="selectSeat(99)" src="free.png"></div>
+            <div class="col s1"><img name="J10" id="100" onclick="selectSeat(100)" src="free.png"></div>
           </div>
-          <div class="row">
-            <div class="col s9 center">
-              <div class="card-panel white z-depth-2  bold" style="height: 75px; width: 740px; border-top:0; border-left:0;">
-                <h6 class="center">Tela</h6>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col s1" style="height: 90px; width: 30px;"></div>
-            <div class="col s1"></div>
-            <div id="btnTicket" class="col s8 center">
-              <a class="blue waves-effect waves-light  btn disabled" onclick="selectTicketsPrice()">Tipo de Ingresso</a>
-            </div>
+          
+           <div class="panel-footer">
+            <button class="btn back-btn">Back</button>
+            <a class="btn next-btn" type="button" href="/pagamento_muka/antes/index.html" style="align-items: center;text-align: center;
+            justify-content: center;padding: 5px;">Next Step</a>
           </div>
 
         </div>
@@ -278,7 +258,7 @@
     console.log(s9.src)
     if (s9.src === "http://127.0.0.1:5500/src/free.png") {
       s9.src = "http://127.0.0.1:5500/src/poltrona.png"
-    } else
+    } else {
       s9.src = "http://127.0.0.1:5500/src/free.png"
     }
 
