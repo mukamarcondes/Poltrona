@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\MUKA\\companhia_aerea"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "pagamento_muka"
+	}
+}
